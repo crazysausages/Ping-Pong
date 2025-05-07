@@ -39,11 +39,6 @@ class Player(GameSprite):
            self.rect.y -= self.speed
        if keys[K_s] and self.rect.y < win_height - 80:
            self.rect.y += self.speed
-
-class Enemy(GameSprite):
-    def __init__(self, player_image, player_x, player_y, player_speed):
-        super().__init__(player_image,player_x, player_y, player_speed)
-        self.image = transform.scale(image.load(player_image), (130, 130))
         
 font.init()
 font = font.Font(None, 35)
